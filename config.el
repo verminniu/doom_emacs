@@ -1,9 +1,11 @@
 ;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
 
+(load! "+bindings")
+
 ;; Place your private configuration here
 (set-terminal-coding-system 'gb2312)
 
-(setq completion-ignore-case t)
+
 
 (def-package! smartparens
   :config
@@ -18,6 +20,8 @@
 (def-package! company
  :init
  (global-company-mode 1)
+ :config
+ (setq completion-ignore-case t)
  )
 
 (def-package! company-quickhelp
@@ -57,5 +61,12 @@
   (setq lsp-ui-doc-enable nil)
 )
 
-;;(add-hook 'yas-before-expand-snippet-hook (lambda () (smartparens-mode -1)))
-;;(add-hook 'yas-after-exit-snippet-hook (lambda () (smartparens-mode 1)))
+(def-package! window-numbering
+  :init
+  (window-numbering-mode 1)
+  :config
+  (setq window-numbering-assign-func
+      (lambda () (when (equal (buffer-name) "*Calculator*") 9)))
+)
+
+(def-package! symbol-overlay)
