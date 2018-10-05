@@ -15,6 +15,7 @@
        workspaces        ; tab emulation, persistence & separate workspaces
 
        :completion
+       ;;; must remove company add this by mysql-self otherwise cquery company-lsp not work well
        ;(company          ; the ultimate code completion backend
        ; +auto)           ; as-you-type code completion
        ;(helm             ; the *other* search engine for love and life
