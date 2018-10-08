@@ -9,6 +9,13 @@
 (prefer-coding-system 'gb2312)
 
 
+;; proj no need add .o/.a
+(setq projectile-globally-ignored-file-suffixes '(".o" ".a"))
+(setq projectile-enable-caching t)
+
+;; add .inl and .h to c++ mode
+(add-to-list 'auto-mode-alist '("\\.inl\\'" . c++-mode))
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
 (def-package! smartparens
   :config
