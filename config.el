@@ -4,6 +4,9 @@
 
 ;; Place your private configuration here
 (set-terminal-coding-system 'gb2312)
+(set-keyboard-coding-system 'gb2312)
+(set-language-environment "Chinese-GB")
+(prefer-coding-system 'gb2312)
 
 
 
