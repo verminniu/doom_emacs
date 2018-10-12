@@ -8,6 +8,15 @@
 (set-language-environment "Chinese-GB")
 (prefer-coding-system 'gb2312)
 
+(which-function-mode t)
+
+(setq doom-theme 'doom-molokai)
+
+(setq doom-font (font-spec :family "Fira Mono" :size 12)
+      doom-variable-pitch-font (font-spec :family "Fira Sans")
+      doom-unicode-font (font-spec :family "DejaVu Sans Mono")
+      doom-big-font (font-spec :family "Fira Mono" :size 19))
+
 (setq global-mark-ring-max 5000         ; increase mark ring to contains 5000 entries
       mark-ring-max 5000                ; increase kill ring to contains 5000 entries
       mode-require-final-newline t      ; add a newline to end of file
