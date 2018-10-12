@@ -14,3 +14,4 @@
 (package! window-numbering)
 (package! iedit)
 (package! symbol-overlay)
+(package! electric)
