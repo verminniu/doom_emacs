@@ -5,6 +5,7 @@
       projectile-keymap-prefix (kbd "C-c C-p"))
 
 (map!
+    [tab]              #'c-indent-line-or-region
     "M-i"              #'symbol-overlay-put
     "M-n"              #'symbol-overlay-jump-next
     "M-p"              #'symbol-overlay-jump-prew
