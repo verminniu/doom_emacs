@@ -8,7 +8,7 @@
     [tab]              #'c-indent-line-or-region
     "M-i"              #'symbol-overlay-put
     "M-n"              #'symbol-overlay-jump-next
-    "M-p"              #'symbol-overlay-jump-prew
+    "M-p"              #'symbol-overlay-jump-prev
     "C-i"              #'iedit-mode
     "C-s"              #'swiper
     "C-S-s"            #'swiper-all

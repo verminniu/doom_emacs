@@ -32,6 +32,7 @@
 ;  (add-hook 'c-mode-common-hook 'flycheck-mode)
   :config
   (setq cquery-sem-highlight-method 'font-lock)
+  ;(setq lsp-highlight-symbol-at-point nil)
   (cquery-use-default-rainbow-sem-highlight)
 )
 

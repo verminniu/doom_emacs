@@ -45,7 +45,7 @@
        unicode           ; extended unicode support for various languages
        vc-gutter         ; vcs diff in the fringe
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
-       window-select     ; visually switch windows
+       window-senlect     ; visually switch windows
 
        :editor
        ;;(format +onsave)  ; automated prettiness
@@ -70,8 +70,8 @@
        ;;ein               ; tame Jupyter notebooks with emacs
        ;;gist              ; interacting with github gists
        ;;macos             ; MacOS-specific commands
-       ;;make              ; run make tasks from Emacs
-       ;;magit             ; a git porcelain for Emacs
+       make              ; run make tasks from Emacs
+       magit             ; a git porcelain for Emacs
        ;;password-store    ; password manager for nerds
        ;;pdf               ; pdf enhancements
        ;;prodigy           ; FIXME managing external services & code builders

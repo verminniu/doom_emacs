@@ -31,15 +31,6 @@
 (add-to-list 'auto-mode-alist '("\\.inl\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
-(def-package! smartparens
-  :config
-  (setq sp-autoinsert-pair nil
-        sp-autodelete-pair nil
-        sp-escape-quotes-after-insert nil)
-  (setq-default sp-autoskip-closing-pair nil)
-  )
-
-
 ;; company
 (def-package! company
   :init
@@ -95,9 +86,3 @@
 
 (def-package! symbol-overlay)
 
-(def-package! electric
-  :init
-  (electric-indent-mode t)
-  (electric-pair-mode t)
-  (electric-layout-mode t)
-)
