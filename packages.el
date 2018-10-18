@@ -10,7 +10,7 @@
 (package! company-lsp)
 
 (package! ivy-yasnippet)
-
+(package! srefactor)
 (package! window-numbering)
 (package! iedit)
 (package! symbol-overlay)

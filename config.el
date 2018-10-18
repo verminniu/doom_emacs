@@ -64,6 +64,16 @@
                            'company-lsp)))
   )
 
+(def-package! srefactor
+  :defer t
+)
+(def-package! srefactor-lisp
+  :defer t
+)
+(after! cc-mode
+  (semantic-mode 1)
+  )
+
 (def-package! ivy-xref
   :init
   (setq xref-show-xrefs-function 'ivy-xref-show-xrefs)

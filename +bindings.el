@@ -7,10 +7,18 @@
 (map!
  (:after cc-mode
    (:map c++-mode-map
-     "M-RET" #'srefactor-refactor-at-point
+     "M-RET"           #'srefactor-refactor-at-point
+;     "M-RET o"         #'srefactor-lisp-one-line
+;     "M-RET m"         #'srefactor-lisp-format-sexp
+;     "M-RET d"         #'srefactor-lisp-format-defun
+;     "M-RET b"         #'srefactor-lisp-format-buffer
     [tab]              #'c-indent-line-or-region)
    (:map c-mode-map
-     "M-RET" #'srefactor-refactor-at-point
+     "M-RET"           #'srefactor-refactor-at-point
+;     "M-RET o"         #'srefactor-lisp-one-line
+;     "M-RET m"         #'srefactor-lisp-format-sexp
+;     "M-RET d"         #'srefactor-lisp-format-defun
+;     "M-RET b"         #'srefactor-lisp-format-buffer
     [tab]              #'c-indent-line-or-region))
 
     "M-i"              #'symbol-overlay-put
