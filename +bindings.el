@@ -35,8 +35,8 @@
     "C-x C-r"          #'counsel-recentf
     )
     (:after helm
-      "C-s"            #'helm-swoop
-      "C-S-s"          #'helm-multi-swoop-all
+      "C-s"            #'swiper-helm
+      "C-S-s"          #'swiper-all
       "C-c g"          #'helm-do-grep-ag
       "C-x C-r"        #'helm-recentf
       "C-c n"          #'helm-semantic-or-imenu

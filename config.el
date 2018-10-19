@@ -28,6 +28,13 @@
 (setq projectile-globally-ignored-file-suffixes '(".o" ".a"))
 (setq projectile-enable-caching t)
 
+(after! hl-line
+  :init
+  (set-face-background 'highlight nil)
+  (set-face-attribute hl-line-face nil :underline t)
+  (set-face-background 'minibuffer-prompt "blue")
+  )
+
 ;; add .inl and .h to c++ mode
 (add-to-list 'auto-mode-alist '("\\.inl\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
@@ -64,11 +71,12 @@
                            'company-lsp)))
   )
 
-(def-package! helm-swoop
-  :defer t
-  :init
-  (setq helm-swoop-use-fuzzy-match t)
-  )
+;;(def-package! helm-swoop
+;;  :defer t
+;;  :init
+;;  (setq helm-swoop-use-fuzzy-match t)
+;;  (setq helm-swoop-speed-or-color nil)
+;;  )
 
 (def-package! iedit
   :defer t

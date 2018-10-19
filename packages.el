@@ -10,7 +10,7 @@
 (package! company-lsp)
 
 ;(package! ivy-yasnippet)
-(package! helm-swoop)
+;(package! helm-swoop)
 (package! srefactor)
 (package! window-numbering)
 (package! iedit)
