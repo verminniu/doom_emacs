@@ -64,26 +64,32 @@
                            'company-lsp)))
   )
 
+(def-package! helm-swoop
+  :defer t
+  :init
+  (setq helm-swoop-use-fuzzy-match t)
+  )
+
 (def-package! iedit
   :defer t
-)
+  )
 
 (def-package! srefactor
   :defer t
-)
+  )
 
 (def-package! srefactor-lisp
   :defer t
-)
+  )
 
 (after! cc-mode
   (semantic-mode 1)
   )
 
-(def-package! ivy-xref
-  :init
-  (setq xref-show-xrefs-function 'ivy-xref-show-xrefs)
-  )
+;;(def-package! ivy-xref
+;;  :init
+;;  (setq xref-show-xrefs-function 'ivy-xref-show-xrefs)
+;;  )
 
 (def-package! lsp-ui
   :init

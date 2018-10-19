@@ -9,7 +9,8 @@
 (package! lsp-ui)
 (package! company-lsp)
 
-(package! ivy-yasnippet)
+;(package! ivy-yasnippet)
+(package! helm-swoop)
 (package! srefactor)
 (package! window-numbering)
 (package! iedit)
