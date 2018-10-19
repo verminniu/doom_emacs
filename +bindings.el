@@ -2,7 +2,7 @@
 
 ;; Change the default key of persp-mode to avoid conflicts with projectile.
 (setq persp-keymap-prefix (kbd "C-c e")
-      projectile-keymap-prefix (kbd "C-c C-p"))
+      projectile-keymap-prefix (kbd "C-c p"))
 
 (map!
  (:after cc-mode
@@ -24,7 +24,6 @@
     "M-i"              #'symbol-overlay-put
     "M-n"              #'symbol-overlay-jump-next
     "M-p"              #'symbol-overlay-jump-prev
-    "C-i"              #'iedit-mode
     "C-s"              #'swiper
     "C-S-s"            #'swiper-all
     "M-%"              #'swiper-query-replace

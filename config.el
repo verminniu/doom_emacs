@@ -64,12 +64,18 @@
                            'company-lsp)))
   )
 
+(def-package! iedit
+  :defer t
+)
+
 (def-package! srefactor
   :defer t
 )
+
 (def-package! srefactor-lisp
   :defer t
 )
+
 (after! cc-mode
   (semantic-mode 1)
   )
