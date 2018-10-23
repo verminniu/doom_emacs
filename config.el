@@ -10,7 +10,8 @@
 
 ;;(which-function-mode t)
 
-(setq doom-theme 'doom-one)
+;;(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-vibrant)
 
 (setq doom-font (font-spec :family "Fira Mono" :size 12)
       doom-variable-pitch-font (font-spec :family "Fira Sans")
@@ -113,6 +114,15 @@
   :config
   (setq window-numbering-assign-func
         (lambda () (when (equal (buffer-name) "*Calculator*") 9)))
+  )
+
+(def-package! whole-line-or-region
+  :init
+  (add-hook 'after-init-hook 'whole-line-or-region-mode)
+  )
+
+(def-package! multiple-cursors
+  :defer t
   )
 
 (def-package! symbol-overlay)
