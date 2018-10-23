@@ -8,9 +8,9 @@
 (set-language-environment "Chinese-GB")
 (prefer-coding-system 'gb2312)
 
-(which-function-mode t)
+;;(which-function-mode t)
 
-(setq doom-theme 'doom-molokai)
+(setq doom-theme 'doom-one)
 
 (setq doom-font (font-spec :family "Fira Mono" :size 12)
       doom-variable-pitch-font (font-spec :family "Fira Sans")
@@ -32,7 +32,7 @@
   :init
   (set-face-background 'highlight nil)
   (set-face-attribute hl-line-face nil :underline t)
-  (set-face-background 'minibuffer-prompt "blue")
+;  (set-face-background 'minibuffer-prompt "blue")
   )
 
 ;; add .inl and .h to c++ mode
