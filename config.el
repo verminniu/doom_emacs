@@ -104,7 +104,7 @@
   :init
   (add-hook 'lsp-mode-hook 'lsp-ui-mode)
   (add-hook 'c-mode-common-hook 'flycheck-mode)
-  ;;(setq lsp-ui-sideline-enable nil)
+  (setq lsp-ui-sideline-enable nil)
   (setq lsp-ui-doc-enable nil)
   )
 

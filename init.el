@@ -4,7 +4,7 @@
 (doom! :feature
        debugger          ; FIXME stepping through code, to help you add bugs
        eval              ; run code, run (also, repls)
-       (evil +everywhere); come to the dark side, we have cookies
+      ;;(evil +everywhere); come to the dark side, we have cookies
        file-templates    ; auto-snippets for empty files
        (lookup           ; helps you navigate your code and documentation
         +docsets)        ; ...or in Dash docsets locally
@@ -82,13 +82,13 @@
 
        :lang
        ;;assembly          ; assembly for fun or debugging
-       (cc); C/C++/Obj-C madness
-       ;;clojure           ; java with a lisp
-       ;;common-lisp       ; if you've seen one lisp, you've seen them all
-       ;;coq               ; proofs-as-programs
-       ;;crystal           ; ruby at the speed of c
-       ;;csharp            ; unity, .NET, and mono shenanigans
-       data              ; config/data formats
+       (cc)                ; C/C++/Obj-C madness
+        ;;clojure           ; java with a lisp
+        ;;common-lisp       ; if you've seen one lisp, you've seen them all
+        ;;coq               ; proofs-as-programs
+        ;;crystal           ; ruby at the speed of c
+        ;;csharp            ; unity, .NET, and mono shenanigans
+        data              ; config/data formats
        ;;erlang            ; an elegant language for a more civilized age
        ;;elixir            ; erlang done right
        ;;elm               ; care for a cup of TEA?
@@ -160,4 +160,4 @@
        :private
        my-cquery
 )
-			
+		
