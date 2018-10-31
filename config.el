@@ -3,6 +3,8 @@
 (load! "+bindings")
 
 ;; Place your private configuration here
+
+;; set charset
 (set-terminal-coding-system 'gb2312)
 (set-keyboard-coding-system 'gb2312)
 (set-language-environment "Chinese-GB")
@@ -12,6 +14,7 @@
 
 ;;(setq doom-theme 'doom-one)
 (setq doom-theme 'doom-vibrant)
+;;(setq doom-theme 'doom-peacock)
 
 (setq doom-font (font-spec :family "Fira Mono" :size 12)
       doom-variable-pitch-font (font-spec :family "Fira Sans")
@@ -55,7 +58,7 @@
   (company-quickhelp-mode)
   )
 
-(use-package lsp-mode
+(def-package! lsp-mode
   :defer 1
   :config
   (setq lsp-highlight-symbol-at-point nil)

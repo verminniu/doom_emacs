@@ -5,7 +5,6 @@
       projectile-keymap-prefix (kbd "C-c p"))
 
 (map!
- (:after evil
    :gnvime "C-n"              #'next-line
    :gnvime "C-p"              #'previous-line
    :gnvime "C-b"              #'backward-char
@@ -30,7 +29,6 @@
    :i      "C-k"              #'kill-line
    :i      "M-k"              #'kill-sentence
    :i      "M-d"              #'kill-word
-   )
 
  (:after cc-mode
    (:map c++-mode-map
