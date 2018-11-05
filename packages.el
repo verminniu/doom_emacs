@@ -8,11 +8,11 @@
 (package! lsp-ui)
 (package! company-lsp)
 
-;(package! ivy-yasnippet)
-;(package! helm-swoop)
 (package! srefactor)
 (package! window-numbering)
 (package! iedit)
 (package! symbol-overlay)
 (package! whole-line-or-region)
 (package! multiple-cursors)
+
+(package! ztree)

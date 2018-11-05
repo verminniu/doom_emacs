@@ -5,10 +5,10 @@
 ;; Place your private configuration here
 
 ;; set charset
-(set-terminal-coding-system 'gb2312)
-(set-keyboard-coding-system 'gb2312)
-(set-language-environment "Chinese-GB")
-(prefer-coding-system 'gb2312)
+;;(set-terminal-coding-system 'gb2312)
+;;(set-keyboard-coding-system 'gb2312)
+;;(set-language-environment "Chinese-GB")
+;;(prefer-coding-system 'gb2312)
 
 ;;(which-function-mode t)
 
@@ -75,13 +75,6 @@
                            'company-lsp)))
   )
 
-;;(def-package! helm-swoop
-;;  :defer t
-;;  :init
-;;  (setq helm-swoop-use-fuzzy-match t)
-;;  (setq helm-swoop-speed-or-color nil)
-;;  )
-
 (def-package! iedit
   :defer t
   )
@@ -97,11 +90,6 @@
 (after! cc-mode
   (semantic-mode 1)
   )
-
-;;(def-package! ivy-xref
-;;  :init
-;;  (setq xref-show-xrefs-function 'ivy-xref-show-xrefs)
-;;  )
 
 (def-package! lsp-ui
   :init
@@ -128,5 +116,10 @@
   :defer t
   )
 
-(def-package! symbol-overlay)
+(def-package! symbol-overlay
+  :defer t
+  )
 
+(def-package! ztree
+  :defer t
+  )
