@@ -20,6 +20,24 @@
                   ".cquery")
                 projectile-project-root-files-top-down-recurring)))
 
+(def-package! lsp-mode
+  :defer 1
+  :config
+  (add-hook 'lsp-after-open-hook 'lsp-enable-imenu)
+  )
+
+(def-package! company-lsp
+  :after (company lsp-mode)
+  )
+
+(def-package! lsp-ui
+  :init
+  (add-hook 'lsp-mode-hook 'lsp-ui-mode)
+  (add-hook 'c-mode-common-hook 'flycheck-mode)
+  (setq lsp-ui-sideline-enable nil)
+  (setq lsp-ui-doc-enable nil)
+  )
+
 (defun cquery//enable ()
   (condition-case nil
       (lsp-cquery-enable)
@@ -32,8 +50,13 @@
 ;  (add-hook 'c-mode-common-hook 'flycheck-mode)
   :config
   (setq cquery-sem-highlight-method 'font-lock)
-  ;(setq lsp-highlight-symbol-at-point nil)
   (cquery-use-default-rainbow-sem-highlight)
+  ;(setq lsp-highlight-symbol-at-point nil)
+;;  (setq company-transformers '(company-sort-by-backend-importance))
+  (setq company-lsp-async t)
+;;  (setq company-lsp-cache-candidates nil)
+  (set-company-backend! '(c-mode c++-mode cuda-mode objc-mode)
+    '(company-lsp company-yasnippet))
 )
 
 ;;;

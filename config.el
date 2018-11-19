@@ -43,37 +43,7 @@
 (add-to-list 'auto-mode-alist '("\\.inl\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
-;; company
-(def-package! company
-  :init
-  (global-company-mode 1)
-  :config
-  (setq completion-ignore-case t)
-  )
-
-(def-package! company-quickhelp
-  :after company
-  :init
-  :config
-  (company-quickhelp-mode)
-  )
-
-(def-package! lsp-mode
-  :defer 1
-  :config
-  (setq lsp-highlight-symbol-at-point nil)
-  (add-hook 'lsp-after-open-hook 'lsp-enable-imenu)
-  )
-
-(def-package! company-lsp
-  :after (company lsp-mode)
-  :init
-  (setq company-lsp-cache-candidates nil)
-  (add-hook 'lsp-mode-hook
-            (lambda()
-              (add-to-list (make-local-variable 'company-backends)
-                           'company-lsp)))
-  )
+(global-company-mode t)
 
 (def-package! iedit
   :defer t
@@ -89,14 +59,6 @@
 
 (after! cc-mode
   (semantic-mode 1)
-  )
-
-(def-package! lsp-ui
-  :init
-  (add-hook 'lsp-mode-hook 'lsp-ui-mode)
-  (add-hook 'c-mode-common-hook 'flycheck-mode)
-  (setq lsp-ui-sideline-enable nil)
-  (setq lsp-ui-doc-enable nil)
   )
 
 (def-package! window-numbering
