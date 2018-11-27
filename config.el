@@ -32,6 +32,8 @@
 (setq projectile-globally-ignored-file-suffixes '(".o" ".a"))
 (setq projectile-enable-caching t)
 
+(add-hook 'after-init-hook 'global-company-mode)
+
 (after! hl-line
   :init
   (set-face-background 'highlight nil)
@@ -43,7 +45,6 @@
 (add-to-list 'auto-mode-alist '("\\.inl\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
-(global-company-mode t)
 
 (def-package! iedit
   :defer t

@@ -21,13 +21,24 @@
                 projectile-project-root-files-top-down-recurring)))
 
 (def-package! lsp-mode
-  :defer 1
+;;  :defer 1
   :config
   (add-hook 'lsp-after-open-hook 'lsp-enable-imenu)
+  ;(setq lsp-highlight-symbol-at-point nil)
   )
 
 (def-package! company-lsp
+;;  :defer 1
   :after (company lsp-mode)
+  :config
+  (setq company-transformers '(company-sort-by-backend-importance))
+;  (setq company-transformers nil)
+  (setq company-lsp-async t)
+;  (setq company-lsp-enable-snippet t)
+  (setq company-lsp-enable-recompletion t)
+  (setq company-lsp-cache-candidates 'auto)
+  (set-company-backend! '(c-mode c++-mode cuda-mode objc-mode)
+    '(company-lsp company-yasnippet))
   )
 
 (def-package! lsp-ui
@@ -51,12 +62,6 @@
   :config
   (setq cquery-sem-highlight-method 'font-lock)
   (cquery-use-default-rainbow-sem-highlight)
-  ;(setq lsp-highlight-symbol-at-point nil)
-;;  (setq company-transformers '(company-sort-by-backend-importance))
-  (setq company-lsp-async t)
-;;  (setq company-lsp-cache-candidates nil)
-  (set-company-backend! '(c-mode c++-mode cuda-mode objc-mode)
-    '(company-lsp company-yasnippet))
 )
 
 ;;;
