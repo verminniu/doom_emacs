@@ -10,19 +10,14 @@
         +docsets)        ; ...or in Dash docsets locally
        snippets          ; my elves. They type so I don't have to
        spellcheck        ; tasing you for misspelling mispelling
-       (syntax-checker   ; tasing you for every semicolon you forget
-        +childframe)     ; use childframes for error popups (Emacs 26+ only)
+       syntax-checker    ; tasing you for every semicolon you forget
        workspaces        ; tab emulation, persistence & separate workspaces
 
        :completion
-       ;;; must remove company add this by mysql-self otherwise cquery company-lsp not work well
-       (company          ; the ultimate code completion backend
-        +auto)           ; as-you-type code completion
-       (helm             ; the *other* search engine for love and life
-        +fuzzy)          ; enable fuzzy search backend for helm
-       ;;ido               ; the other *other* search engine...
-       ;;(ivy              ; a search engine for love and life
-       ;; +fuzzy)          ; enable fuzzy search backend for ivy
+       ;company           ; the ultimate code completion backend
+       helm              ; the *other* search engine for love and life
+       ;;ido              ; the other *other* search engine...
+       ;;ivy              ; a search engine for love and life
 
        :ui
        ;;deft              ; notational velocity for Emacs
@@ -44,8 +39,8 @@
        ;;tabbar            ; FIXME an (incomplete) tab bar for Emacs
        unicode           ; extended unicode support for various languages
        vc-gutter         ; vcs diff in the fringe
-       vi-tilde-fringe   ; fri˜˜˜nge tildes to mark beyond EOB
-       ;;window-senlect     ; visually switch windows
+       vi-tilde-fringe   ; fringe tildes to mark beyond EOB
+       window-select     ; visually switch windows
 
        :editor
        ;;(format +onsave)  ; automated prettiness
@@ -55,7 +50,10 @@
        rotate-text       ; cycle region at point between text candidates
 
        :emacs
-       dired             ; making dired pretty [functional]
+       (dired            ; making dired pretty [functional]
+       ;;+ranger         ; bringing the goodness of ranger to dired
+       ;;+icons          ; colorful icons for dired-mode
+        )
        ediff             ; comparing files in Emacs
        electric          ; smarter, keyword-based electric-indent
        ;;eshell            ; a consistent, cross-platform shell (WIP)
@@ -77,19 +75,20 @@
        ;;pdf               ; pdf enhancements
        ;;prodigy           ; FIXME managing external services & code builders
        ;;rgb               ; creating color strings
+       ;;terraform         ; infrastructure as code
        ;;tmux              ; an API for interacting with tmux
        ;;upload            ; map local to remote projects via ssh/ftp
        ;;wakatime
 
        :lang
        ;;assembly          ; assembly for fun or debugging
-       (cc)                ; C/C++/Obj-C madness
-        ;;clojure           ; java with a lisp
-        ;;common-lisp       ; if you've seen one lisp, you've seen them all
-        ;;coq               ; proofs-as-programs
-        ;;crystal           ; ruby at the speed of c
-        ;;csharp            ; unity, .NET, and mono shenanigans
-        data              ; config/data formats
+       (cc +irony +rtags); C/C++/Obj-C madness
+       ;;clojure           ; java with a lisp
+       ;;common-lisp       ; if you've seen one lisp, you've seen them all
+       ;;coq               ; proofs-as-programs
+       ;;crystal           ; ruby at the speed of c
+       ;;csharp            ; unity, .NET, and mono shenanigans
+       data              ; config/data formats
        ;;erlang            ; an elegant language for a more civilized age
        ;;elixir            ; erlang done right
        ;;elm               ; care for a cup of TEA?
@@ -158,8 +157,8 @@
        ;; library, and additional ex commands for evil-mode. Use it as a
        ;; reference for your own modules.
        (default +bindings +snippets +evil-commands)
-
+       ;;(default +bindings +evil-commands)
+      
        :private
        my-cquery
 )
-		

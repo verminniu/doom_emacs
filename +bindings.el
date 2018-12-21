@@ -76,14 +76,14 @@
      "s"         #'mc/mark-sgml-tag-pair
      "d"         #'mc/mark-all-like-this-in-defun))
 
- (:after ivy
-   "C-s"              #'swiper
-   "C-S-s"            #'swiper-all
-   "M-%"              #'swiper-query-replace
-   ;; Counsel
-   "C-c n"            #'counsel-imenu
-   "C-x C-r"          #'counsel-recentf
-   )
+;; (:after ivy
+;;   "C-s"              #'swiper
+;;   "C-S-s"            #'swiper-all
+;;   "M-%"              #'swiper-query-replace
+;;   ;; Counsel
+;;   "C-c n"            #'counsel-imenu
+;;   "C-x C-r"          #'counsel-recentf
+;;   )
  (:after helm
    "C-s"            #'swiper-helm
    "C-S-s"          #'swiper-all

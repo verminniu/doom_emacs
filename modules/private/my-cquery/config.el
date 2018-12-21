@@ -21,43 +21,41 @@
                 projectile-project-root-files-top-down-recurring)))
 
 (def-package! lsp-mode
-;;  :defer 1
+  :commands lsp
+  :init
+  (setq lsp-auto-guess-root t)
   :config
-  (add-hook 'lsp-after-open-hook 'lsp-enable-imenu)
+  (require 'lsp-clients)
+  ;(add-hook 'lsp-after-open-hook 'lsp-enable-imenu)
   ;(setq lsp-highlight-symbol-at-point nil)
   )
 
 (def-package! company-lsp
-;;  :defer 1
-  :after (company lsp-mode)
-  :config
-  (setq company-transformers '(company-sort-by-backend-importance))
-;  (setq company-transformers nil)
-  (setq company-lsp-async t)
-;  (setq company-lsp-enable-snippet t)
-  (setq company-lsp-enable-recompletion t)
-  (setq company-lsp-cache-candidates 'auto)
+  :commands company-lsp
+  :init
   (set-company-backend! '(c-mode c++-mode cuda-mode objc-mode)
     '(company-lsp company-yasnippet))
+  :config
+;  (setq company-transformers '(company-sort-by-backend-importance))
+  (setq company-transformers nil)
+  (setq company-lsp-async t)
+  (setq company-lsp-enable-snippet t)
+  (setq company-lsp-enable-recompletion t)
+  (setq company-lsp-cache-candidates nil)
   )
 
 (def-package! lsp-ui
   :init
   (add-hook 'lsp-mode-hook 'lsp-ui-mode)
   (add-hook 'c-mode-common-hook 'flycheck-mode)
-  (setq lsp-ui-sideline-enable nil)
-  (setq lsp-ui-doc-enable nil)
+;;  (setq lsp-ui-sideline-enable nil)
+;;  (setq lsp-ui-doc-enable nil)
   )
 
-(defun cquery//enable ()
-  (condition-case nil
-      (lsp-cquery-enable)
-    (user-error nil)))
-
 (def-package! cquery
-  :commands lsp-cquery-enable
+  :commands lsp
   :init
-  (add-hook 'c-mode-common-hook #'cquery//enable)
+  (add-hook 'c-mode-common-hook (lambda()(require 'cquery)(lsp)))
 ;  (add-hook 'c-mode-common-hook 'flycheck-mode)
   :config
   (setq cquery-sem-highlight-method 'font-lock)
