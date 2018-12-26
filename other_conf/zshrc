@@ -1,0 +1,39 @@
+source /usr/local/share/antigen/antigen.zsh
+
+alias vscode='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
+alias mkproj='echo > .projectile'
+
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+export LDFLAGS="-L/usr/local/opt/gettext/lib"
+export CPPFLAGS="-I/usr/local/opt/gettext/include"
+#export LANG='zh_CN.GB2312'
+#export LC_ALL='zh_CN.GB2312'
+
+# 加载oh-my-zsh库
+antigen use oh-my-zsh
+
+# 加载原版oh-my-zsh中的功能(robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle heroku
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+
+# 语法高亮功能
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# 代码提示功能
+antigen bundle zsh-users/zsh-autosuggestions
+
+# 自动补全功能
+antigen bundle zsh-users/zsh-completions
+
+# 加载主题
+antigen theme bhilburn/powerlevel9k powerlevel9k
+
+# 保存更改
+antigen apply
