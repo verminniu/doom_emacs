@@ -32,6 +32,7 @@
 (setq projectile-globally-ignored-file-suffixes '(".o" ".a"))
 (setq projectile-enable-caching t)
 
+;(add-hook 'after-init-hook 'global-company-mode)
 (def-package! company
   :init
   (add-hook 'after-init-hook 'global-company-mode)
