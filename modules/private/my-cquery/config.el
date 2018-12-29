@@ -27,7 +27,7 @@
   :config
   (require 'lsp-clients)
   ;(add-hook 'lsp-after-open-hook 'lsp-enable-imenu)
-  ;(setq lsp-highlight-symbol-at-point nil)
+  (setq lsp-highlight-symbol-at-point nil)
   )
 
 (def-package! company-lsp
@@ -36,11 +36,11 @@
   (set-company-backend! '(c-mode c++-mode cuda-mode objc-mode)
     '(company-lsp company-yasnippet))
   :config
-;  (setq company-transformers '(company-sort-by-backend-importance))
-  (setq company-transformers nil)
+  (setq company-transformers '(company-sort-by-backend-importance))
+  ;(setq company-transformers nil)
   (setq company-lsp-async t)
-  (setq company-lsp-enable-snippet t)
-  (setq company-lsp-enable-recompletion t)
+  ;(setq company-lsp-enable-snippet t)
+  ;(setq company-lsp-enable-recompletion t)
   (setq company-lsp-cache-candidates nil)
   )
 
@@ -48,8 +48,8 @@
   :init
   (add-hook 'lsp-mode-hook 'lsp-ui-mode)
   (add-hook 'c-mode-common-hook 'flycheck-mode)
-;;  (setq lsp-ui-sideline-enable nil)
-;;  (setq lsp-ui-doc-enable nil)
+  (setq lsp-ui-sideline-enable nil)
+  (setq lsp-ui-doc-enable nil)
   )
 
 (def-package! cquery
