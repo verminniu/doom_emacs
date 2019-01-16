@@ -93,7 +93,7 @@
    )
  (:after projectile
    (:map projectile-command-map
-     "a"           #'projectile-find-other-file-other-window
+;;     "a"           #'projectile-find-other-file-other-window
      )
    )
  (:after company
