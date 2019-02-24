@@ -1,6 +1,6 @@
 ;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
 
-(load! "+bindings")
+;;(load! "+bindings")
 
 ;; Place your private configuration here
 
