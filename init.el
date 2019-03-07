@@ -9,33 +9,31 @@
        (lookup           ; helps you navigate your code and documentation
         +docsets)        ; ...or in Dash docsets locally
        snippets          ; my elves. They type so I don't have to
-       spellcheck        ; tasing you for misspelling mispelling
-       syntax-checker    ; tasing you for every semicolon you forget
        workspaces        ; tab emulation, persistence & separate workspaces
 
        :completion
-       ;company           ; the ultimate code completion backend
-       helm              ; the *other* search engine for love and life
+       ;;company           ; the ultimate code completion backend
+       ;;helm              ; the *other* search engine for love and life
        ;;ido              ; the other *other* search engine...
-       ;;ivy              ; a search engine for love and life
+       ivy              ; a search engine for love and life
 
        :ui
        ;;deft              ; notational velocity for Emacs
        doom              ; what makes DOOM look the way it does
        doom-dashboard    ; a nifty splash screen for Emacs
-       doom-modeline     ; a snazzy Atom-inspired mode-line
+       ;;doom-modeline     ; a snazzy Atom-inspired mode-line
        doom-quit         ; DOOM quit-message prompts when you quit Emacs
-       evil-goggles      ; display visual hints when editing in evil
+       ;;evil-goggles      ; display visual hints when editing in evil
        ;;fci               ; a `fill-column' indicator
        hl-todo           ; highlight TODO/FIXME/NOTE tags
-       ;;modeline          ; snazzy, Atom-inspired modeline, plus API
+       modeline          ; snazzy, Atom-inspired modeline, plus API
        nav-flash         ; blink the current line after jumping
        ;;neotree           ; a project drawer, like NERDTree for vim
        treemacs          ; a project drawer, like neotree but cooler
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
         +defaults)       ; default popup rules
-       ;;pretty-code       ; replace bits of code with pretty symbols
+       pretty-code       ; replace bits of code with pretty symbols
        ;;tabbar            ; FIXME an (incomplete) tab bar for Emacs
        unicode           ; extended unicode support for various languages
        vc-gutter         ; vcs diff in the fringe
@@ -43,8 +41,9 @@
        window-select     ; visually switch windows
 
        :editor
-       ;;(format +onsave)  ; automated prettiness
+       (format +onsave)  ; automated prettiness
        ;;lispy             ; vim for lisp, for people who dont like vim
+       fold
        multiple-cursors  ; editing in many places at once
        ;;parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
@@ -54,10 +53,10 @@
        ;;+ranger         ; bringing the goodness of ranger to dired
        ;;+icons          ; colorful icons for dired-mode
         )
-       ediff             ; comparing files in Emacs
+       ;;ediff             ; comparing files in Emacs
        electric          ; smarter, keyword-based electric-indent
        ;;eshell            ; a consistent, cross-platform shell (WIP)
-       hideshow          ; basic code-folding support
+       ;;hideshow          ; basic code-folding support
        imenu             ; an imenu sidebar and searchable code index
        ;;term              ; terminals in Emacs
        vc                ; version-control and Emacs, sitting in a tree
@@ -65,7 +64,9 @@
        :tools
        ;;ansible
        ;;docker
-       editorconfig      ; let someone else argue about tabs vs spaces
+       flycheck
+       lsp
+       ;;editorconfig      ; let someone else argue about tabs vs spaces
        ;;ein               ; tame Jupyter notebooks with emacs
        ;;gist              ; interacting with github gists
        ;;macos             ; MacOS-specific commands
@@ -83,6 +84,7 @@
        :lang
        ;;assembly          ; assembly for fun or debugging
        (cc +irony +rtags); C/C++/Obj-C madness
+       ;;(cc); C/C++/Obj-C madness
        ;;clojure           ; java with a lisp
        ;;common-lisp       ; if you've seen one lisp, you've seen them all
        ;;coq               ; proofs-as-programs
@@ -156,8 +158,8 @@
        ;; provides a Spacemacs-inspired keybinding scheme, a custom yasnippet
        ;; library, and additional ex commands for evil-mode. Use it as a
        ;; reference for your own modules.
-       (default +bindings +snippets +evil-commands)
-       ;;(default +bindings +evil-commands)
+       ;;(default +bindings +snippets +evil-commands)
+       (default +bindings +smartparens)
       
        :private
        my-cquery

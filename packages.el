@@ -1,6 +1,6 @@
 ;; -*- no-byte-compile: t; -*-
 ;;; private/my/packages.el
-(disable-packages! cmake-mode company-irony company-irony-c-headers flycheck-irony irony irony-eldoc ivy-rtags rtags lpy)
+(disable-packages!  company-irony company-irony-c-headers flycheck-irony irony irony-eldoc ivy-rtags rtags )
 
 (package! srefactor)
 (package! window-numbering)
