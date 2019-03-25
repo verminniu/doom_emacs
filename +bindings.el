@@ -14,9 +14,7 @@
  ;;:gnvime "C-d"              #'delete-forward-char
  ;;:gnvime "M-b"              #'backward-word
  ;;:gnvime "M-f"              #'forward-word
- ;;:gnvime "M-i"              #'symbol-overlay-put
- ;;:gnvime "M-n"              #'symbol-overlay-jump-next
- ;;:gnvime "M-p"              #'symbol-overlay-jump-prev
+
  ;;:gnvime "C-v"              #'scroll-up-command
  ;;:gnvime "M-v"              #'scroll-down-command
  ;;:gnvime "M-."              #'xref-find-definitions
@@ -29,6 +27,13 @@
  ;;:i      "C-k"              #'kill-line
  ;;:i      "M-k"              #'kill-sentence
  ;;:i      "M-d"              #'kill-word
+  "M-i"              #'symbol-overlay-put
+  "M-n"              #'symbol-overlay-jump-next
+  "M-p"              #'symbol-overlay-jump-prev
+
+;; :gnvime "M-i"              #'symbol-overlay-put
+;; :gnvime "M-n"              #'symbol-overlay-jump-next
+;; :gnvime "M-p"              #'symbol-overlay-jump-prev
 
  (:after cc-mode
    (:map c++-mode-map
